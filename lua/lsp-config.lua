@@ -1,5 +1,10 @@
 local wk = require("which-key")
 wk.register({
+    K = {':lua vim.lsp.buf.hover()<CR>', "Hover"},
+    ['<c-k>'] = {':lua vim.lsp.buf.signature_help()<CR>', "Signature Help"}
+})
+
+wk.register({
     g = {
         name = "lsp",
         d = {':lua vim.lsp.buf.definition()<CR>', "Go To Definition"},
@@ -10,13 +15,8 @@ wk.register({
         r = {':lua vim.lsp.buf.references()<CR>', "Go To References"},
         t = {':lua vim.lsp.buf.type_definition()<CR>', "Type Definition"}
     },
-    K = {':lua vim.lsp.buf.hover()<CR>', "Hover"},
-    ['<c-k>'] = {':lua vim.lsp.buf.signature_help()<CR>', "Signature Help"}
-})
-
-wk.register({
-    ['af'] = {':lua vim.lsp.buf.code_action()<CR>', "Code Action"},
+    ['ca'] = {':lua vim.lsp.buf.code_action()<CR>', "Code Action"},
     ['rn'] = {':lua vim.lsp.buf.rename()<CR>', "Rename"},
-    ['fmt'] = {':lua vim.lsp.buf.formatting()<CR>', "Formatting"},
-    ['e'] = {':lua vim.lsp.buf.open_float()<CR>', "Open Float"}
+    ['fm'] = {':lua vim.lsp.buf.formatting()<CR>', "Formatting"},
+    ['of'] = {':lua vim.lsp.buf.open_float()<CR>', "Open Float"}
 }, {prefix = "<leader>"})
