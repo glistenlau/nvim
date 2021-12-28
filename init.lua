@@ -58,9 +58,9 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp
 
 -- Setup lua lsp
 local sumneko_binary_path =
-    "/opt/homebrew/Cellar/lua-language-server/2.5.5/libexec/bin/lua-language-server"
+"/usr/local/Cellar/lua-language-server/2.5.6/bin/lua-language-server"
 local sumneko_root_path =
-    "/opt/homebrew/Cellar/lua-language-server/2.5.5/libexec/"
+"/usr/local/Cellar/lua-language-server/2.5.6/libexec"
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
