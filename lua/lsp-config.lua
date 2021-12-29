@@ -18,5 +18,5 @@ wk.register({
     ['ca'] = {':lua vim.lsp.buf.code_action()<CR>', "Code Action"},
     ['rn'] = {':lua vim.lsp.buf.rename()<CR>', "Rename"},
     ['fm'] = {':lua vim.lsp.buf.formatting()<CR>', "Formatting"},
-    ['of'] = {':lua vim.lsp.buf.open_float()<CR>', "Open Float"}
+    ['of'] = {':lua vim.diagnostic.open_float()<CR>', "Open Float"}
 }, {prefix = "<leader>"})
