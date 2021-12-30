@@ -5,6 +5,8 @@ vim.opt.autowrite = true
 vim.opt.termguicolors = true
 vim.wo.number = true
 
+vim.g.autosave_state = true
+
 -- Setup nvim-cmp.
 local cmp = require 'cmp'
 
@@ -58,9 +60,8 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp
 
 -- Setup lua lsp
 local sumneko_binary_path =
-"/usr/local/Cellar/lua-language-server/2.5.6/bin/lua-language-server"
-local sumneko_root_path =
-"/usr/local/Cellar/lua-language-server/2.5.6/libexec"
+    "/usr/local/Cellar/lua-language-server/2.5.6/bin/lua-language-server"
+local sumneko_root_path = "/usr/local/Cellar/lua-language-server/2.5.6/libexec"
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
