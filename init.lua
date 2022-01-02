@@ -5,8 +5,6 @@ vim.opt.autowrite = true
 vim.opt.termguicolors = true
 vim.wo.number = true
 
-vim.g.autosave_state = true
-
 -- Setup nvim-cmp.
 local cmp = require 'cmp'
 
@@ -122,3 +120,5 @@ local opts = {
 }
 
 require('rust-tools').setup(opts)
+
+vim.g.autosave_state = true
